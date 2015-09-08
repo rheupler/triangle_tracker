@@ -1,17 +1,17 @@
-describe('leapYear', function() {
-  it("is false for a year that is not divisible by 4", function() {
-    expect(leapYear(1999)).to.equal(false);
+describe('triangle', function() {
+  it('will return true if equilateral triangle', function() {
+    expect(triangle(2, 2, 2)).to.equal('Equilateral')
   });
 
-  it('is true for years divisible by 4', function() {
-    expect(leapYear(4)).to.eq(true);
+  it('will return isosceles for triangle', function() {
+    expect(triangle(2, 2, 3)).to.eq("Isosceles")
   });
 
-  it('is false for most years divisible by 100', function() {
-    expect(leapYear(1900)).to.equal(false);
+  it('will return scalene for triangle with no equal sides', function() {
+    expect(triangle(2, 5, 6)).to.eq("Scalene")
   });
 
-  it('returns true if divisible by 4 hundo', function() {
-    expect(leapYear(800)).to.eq(true);
+  it('will return an error if it is not a triangle', function() {
+    expect(triangle(2, 2, 8)).to.equal("Not a triangle.")
   });
 });
